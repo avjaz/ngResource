@@ -1,0 +1,19 @@
+<div>
+  <table class="table">
+    <thead>
+      <th>Name</th>
+      <th>Address</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="marker in markers">
+        <td>{{marker.options.title}}</td>
+        <td>{{marker.address}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="jumbotron">
+  <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+    <ui-gmap-markers models="markers" idKey="id" coords="'self'" />
+  </ui-gmap-google-map>
+</div>
